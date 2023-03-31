@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    const double WALKING_CALORIES_PER_HOUR = 4.0;
+    const double RUNNING_CALORIES_PER_HOUR = 10.0;
+    const double GYM_CALORIES_PER_HOUR = 6.0;
+
+    
+    double distance_walked, distance_run, time_gym;
+
+   
+    cout << "Enter the distance walked (in km): ";
+    cin >> distance_walked;
+
+    cout << "Enter the distance run (in km): ";
+    cin >> distance_run;
+
+    cout << "Enter the time spent in the gym (in hours): ";
+    cin >> time_gym;
+
+    
+    double calories_walked = distance_walked * WALKING_CALORIES_PER_HOUR;
+    double calories_run = distance_run * RUNNING_CALORIES_PER_HOUR;
+    double calories_gym = time_gym * GYM_CALORIES_PER_HOUR;
+
+    double total_calories_burned = calories_walked + calories_run + calories_gym;
+
+    -
+    cout << "Total calories burned: " << total_calories_burned << " kcal" << endl;
+
+    return 0;
+}
