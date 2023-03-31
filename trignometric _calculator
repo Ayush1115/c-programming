@@ -1,0 +1,40 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    char op;
+    double angle, result;
+
+    cout << "Enter an operator (s, c, t): ";
+    cin >> op;
+
+    cout << "Enter an angle in degrees: ";
+    cin >> angle;
+
+
+    double radians = angle * M_PI / 180.0;
+
+    switch(op) {
+        case 's':
+            result = sin(radians);
+            break;
+
+        case 'c':
+            result = cos(radians);
+            break;
+
+        case 't':
+            result = tan(radians);
+            break;
+
+        default:
+            cout << "Error: Invalid operator";
+            return 1;
+    }
+
+    cout << "Result: " << result << endl;
+
+    return 0;
+}
